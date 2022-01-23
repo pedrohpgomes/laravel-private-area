@@ -39,6 +39,15 @@
                 </div>
             @endif
 
+            {{-- login errors --}}
+            @if(isset($error))
+                @foreach($error as $error_message)
+                    <div class="alert alert-danger text-center">
+                        {{$error_message}}
+                    </div>
+                @endforeach
+            @endif
+
         </div>
     </div>
 </div>{{-- container --}}
